@@ -24,14 +24,16 @@ public class InsertionSort {
         for(int firstUnsortedIndex=1;firstUnsortedIndex<array.length;firstUnsortedIndex++)
         {
             int  newElement=array[firstUnsortedIndex];
+            System.out.println("<<<newElement>>>"+newElement);
             int i;
             for(i=firstUnsortedIndex; i>0 && array[i-1]  > newElement; i--)
             {
-                array[i] = array[i-1];
-                //System.out.println(i+"<<<inner loop>>>"+array[i]);
+                System.out.println("<<<array[i]>>>"+array[i]+"<<<array[i-1]>>>"+array[i-1]);
+                array[i] = array[i-1];/*alternate the values to make room for the newElement*/ 
             }
+            System.out.println("<<<array[i]>>>"+array[i]+"<<<newElement>>>"+newElement);
             array[i] = newElement;
-            System.out.println(firstUnsortedIndex+"<<<outer loop>>>"+array[i]);
+            System.out.println("<<<firstUnsortedIndex>>>"+firstUnsortedIndex+"<<<array[i]>>>"+array[i]+"\n");
         }
         System.out.println("Sorted>>>"+Arrays.toString(array)); 
         /*
@@ -43,21 +45,6 @@ public class InsertionSort {
         - O(n*n) time complexity - quadratic
         - stable algorith
         */
-    }
-    
-    
-    
-    
-    
-    public void sortArrays(int []array,int i,int j )//traversal goes from rigt to left
-    {
-        if(i==j)
-        {
-            return;
-        }
-        int temp=array[i];
-        array[i]=array[j];
-        array[j]=temp;        
     }
     
 }
