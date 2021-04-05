@@ -29,13 +29,11 @@ public class MainClass {
         
         //new InsertionSort().insertionSort();
         //new MergeSort().mergeSort(0,6);
-        // Encode 
-String asB64 = Base64.getEncoder().encodeToString("some string".getBytes("utf-8"));
-System.out.println(asB64); // Output will be: c29tZSBzdHJpbmc=
-
-// Decode
-byte[] asBytes = Base64.getDecoder().decode("c29tZSBzdHJpbmc=");
-System.out.println(new String(asBytes, "utf-8")); // And the output is: some string
-        
+        //int  arr[]={10,20,15,30,5,75,40};
+        new QuickSort().processByRightMostElement();
+        //new QuickSort().processByMiddleElement();
     }
+   
+    
+    
 }
